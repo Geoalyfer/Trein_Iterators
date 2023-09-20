@@ -1,0 +1,12 @@
+# A função iterators (iter) ajuda a reduzir o consumo de memória dedicada a operação. Entretanto pode ocorrer uma limitação ao final da iteração do último elemento após a execução da função (next). A solução sugerida foi a utilização da função for para evitar o erro.
+iterador = iter(lista)
+next(iterador)
+for i in iterador:
+    print(i)
+
+print(list(range(10)))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+contador = iter(range(10))
+next(contador)
+0
+# O output será o valor do range entre 0 e 9 e apenas um deles aparecerá de cada vez.
